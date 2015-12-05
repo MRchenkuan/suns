@@ -1,0 +1,71 @@
+/*首页的四个按钮*/
+html{Font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif}
+.nav-option{float: right;position:relative}
+.nav-option li{overflow:hidden;text-align:center;line-height:59px;transition:all .5s ease;right: 0;width: 59px;height:60px;list-style: none;position: absolute;background: #fff}
+.nav-option li:nth-child(4){z-index: 9999}
+
+/*menu 文字的样式*/
+.nav-option li:nth-child(12){opacity: 1;right: 80px;transition:opacity 3s cubic-bezier(0.58, -0.24, 0.25, 1)}
+.open li a:hover{color:#E06B0C;transition:all .3s ease; }
+.open li a{color:#000;transition:all .3s ease; }
+
+/*全页遮罩部分*/
+#preProgress{transition:all .5s ease;}
+.enterable{padding: 10px 0;display:block;margin: auto;width: 150px;background: #DE6A0C;color: white;transition:all .5s ease;}
+.disable{padding: 10px 0;display:block;margin: auto;width: 150px;background: grey;color: white;}
+
+.nav-option li span{border-left:1px #D8D8E5 solid;color:black;line-height: 59px;text-align: center;display: block;font-size: 1.5em;transition:all .3s ease}
+.nav-option li:nth-child(4) span{border-bottom: 1px solid #D8D8E5}
+.nav-option li span:hover{color: #E06B0C;transition:all .5s ease}
+
+.news-content{overflow: hidden;width: 100%;height:100%;margin: 0 auto;position: relative;border-right: 1px solid #D8D8E5;border-left: 1px solid #D8D8E5;}
+
+.news-option{;z-index:990;position: absolute;bottom: 0;left: 0;right: 0;height: 30%;overflow: hidden;}
+.news-option li{position:relative;float:left;color:#fff;z-index:0;height: 100%;}
+.news-option li a{bottom: 0;height: 70%;background: #393939;border-right: 1px solid #ccc;border-bottom:10px solid #838383;display:block;position: absolute;transition:all .5s ease;}
+.news-option li a:hover,.frame-options .frame-now-choice{height: 95%;background: #de6a0c;border-bottom:10px solid #e69220;transition:all .5s ease;}
+
+.news-option p:nth-child(1){padding: 30px;display: block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.news-option p:nth-child(2){padding:0 30px;font-size: 12px;opacity: 0;transition:all .5s ease;}
+.news-option p:nth-child(3){padding: 20px 30px;position: absolute;bottom: 0;}
+
+.news-option .plusTag{color: #828282;position: absolute;right: 0;bottom: 0;padding: 20px 30px;font-size: 1em;transition:all .5s ease;}
+.frame-now-choice .plusTag{color:#fff;transform:rotate(90deg);transition:all .5s ease; }/*加号渐变*/
+.frame-now-choice p{opacity: 1 !important;}
+.frame-options{position: relative;transition:all .5s ease;height: 100%;display: inline-flex}
+
+/*左右按钮*/
+.btn-option{display:table;height:22.1%;position: absolute;bottom:0;width: 60px;background: #D8D8E5;transition:all .5s ease;}
+.btn-option:hover{background: #de6a0c;transition:all .5s ease;}
+.btn-option span{display: table-cell;color: #fff;vertical-align: middle;text-align: center;font-size: 2em;background: no-repeat center center}
+.btn-option-left{left: 0}
+.btn-option-right{right: 0}
+
+/*全页的四个按钮*/
+#page-operator{border-left:1px solid #D8D8E5;width:58px;position: fixed;right: 0;top:60px;z-index: 999;background: #fff;transition:all .5s ease}
+.page-option{width: 100%;}
+.page-option li{width: 100%;}
+.page-option li a{display: block;position: relative}
+.page-option li span{background: #fff;position: relative;;border-bottom:1px #D8D8E5 solid;color: #818182;line-height: 60px;text-align: center;display: block;font-size: 1.5em;transition:all .5s ease}
+.page-option li span:hover{color: #000000;background: #c7c7c7;}
+.page-option-tag{line-height: 78px;text-align: center }
+.riTopTag{padding-right: 54px;color: #fff;font-weight: bolder;text-align: center;overflow: hidden;line-height: 60px;background: #de6a0c;position: absolute;right: 0;top:0;width:0;height: 60px;transition:all .5s ease}
+
+/*板块title*/
+.title{width: 100%;height: 60px;line-height: 60px;background: #D8D8E5;}
+.title .tag-left{;background: #9296A3;text-align: center;color: #fff;width: 180px;float: left;transition:all .5s ease;}
+.title .tag-left:hover{background: #de6a0c;color: #9b4a09;text-shadow:0 1px #ff992f;transition:all .5s ease;}
+.title .tag-right{float: right;margin-right: 20px;color: #000;text-shadow: 0 1px #fff;}
+
+/*案例部分*/
+.cases{height: 33.3%;float: left;background: white;position: relative;transition:all .5s ease;overflow: hidden}
+.cases img{z-index:0;position: absolute;left: 0;top:0;width: 100%;height: 100%;transition:all .5s ease;}
+.cases img:hover{transform:scale(1.2)}
+
+/*预加载部分*/
+#preMask{width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: white;z-index: 999999}
+#preMask .logo{text-align: center;font-size: 36px;margin: 40px 0;}
+#preMask .link{display: table;width: 100%;margin: 40px 0;}
+#preMask .link li{display: table-cell;width: 25%}
+#preMask .entrance{text-align: center;position: relative}
+#preProgress{color:white;display:block;width: 50%;background: #DE6A0C;line-height: 30px;height: 30px;}

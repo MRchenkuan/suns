@@ -1,0 +1,46 @@
+/* PC浏览器适配样式 */
+@media screen and (min-width: 768px) {
+    .open li:nth-child(1){right: 180px;}
+    .open li:nth-child(2){right: 120px}
+    .open li:nth-child(3){right: 60px}
+    .open li:nth-child(4){right: 0}
+    /*-----------------*/
+    .open li:nth-child(5){ width:80px;right: 320px}
+    .open li:nth-child(6){ width:80px;right: 400px}
+    .open li:nth-child(7){ width:80px;right: 480px}
+    .open li:nth-child(8){ width:80px;right: 560px}
+    .open li:nth-child(9){ width:80px;right: 640px}
+    .open li:nth-child(10){width:80px;right: 720px}
+    .open li:nth-child(11){width:80px;right: 800px}
+    .open li:nth-child(12){width:80px;right: 880px !important;opacity: 0!important;transition:all .5s ease !important;}
+
+    .block{padding: 0 60px;}
+    .first-block{margin-top: 60px;}
+    #nav{height: 60px;margin-bottom: 2px;position: fixed;top:0;z-index: 999;background: #fff;width: 100%}
+    #logo{height: 40px;display: inline-block;padding: 10px 0 0 60px}
+    #news,#about, #case{height: 750px;}
+    #contact{height: 100%;}
+
+    /*联系方式部分*/
+    #contact-board{font-size: 12px;width: 80%;background: #fff;float: left;border-right: 1px solid #D8D8E5}
+    #contact-board ul li{float: left;width: 23.3%;margin: 5%;line-height: 1.2}
+    #link{;clear: both;height: 100px;border-top: 1px solid #D8D8E5;padding-left: 120px;}
+    #link:before{content: 'LINK:';position:absolute;font-size: 24px;line-height: 100px;color: #DE6A0C;left: 50px;}
+    #link a{height: 100%;width:25%;float: left;background: no-repeat center center}
+    dl,dd{margin: 0}
+    dd,dt{line-height: 1.75}
+    #qrcode-board {width: 20%;float: right;text-align: center;margin:50px -1px;border-left:1px solid #D8D8E5}
+    #qrcode-board img {width: 45%;}
+    .qrcode{margin: 10px;}
+
+    #footer{width: 100%;height: 120px;line-height: 120px;background: #393939;color: #ffffff;text-align: center;font-size: 12px;clear: both}
+
+    .singleFrame{background:#202020;height:100%;width:100%;float: left;display: inline-flex}
+
+    .about-content .impress{float: left;width: 77%;height: 100%}
+    .about-content .intro{float: left;width: 23%;line-height: 2}
+    .about-content .intro p{padding: 40px 20px;color: #DE6A0C;font-weight: bolder}
+    .about-content .intro a{padding: 40px 20px;color: #DE6A0C;font-weight: bolder;font-size: 12px;text-align: right}
+    .about-content .intro div{padding: 0 20px;color: #ffffff;font-size: 12px;}
+
+}
