@@ -17,3 +17,6 @@
 .five-dpt{width: 18% !important;float: left;padding-right: 2%}
 .five-dpt:nth-child(5){padding-right: 0;}
 .title{font-size: 16px;font-weight: bolder;color: #E69220;}
+
+.two-col-img{margin: 2%;width: 45%;float: left}
+
