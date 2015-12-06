@@ -29,7 +29,7 @@
 <div id="nav">
     <img onclick="window.location='./index.html'" id="logo" src="./UI/logo.png"/>
 
-    <ul class="nav-option">
+    <ul class="nav-option open">
         <li><a href="javascript:void(0)"><span class="iconfont icon-wechat"></span></a></li>
         <li><a href="javascript:void(0)"><span class="iconfont icon-weibo"></span></a></li>
         <li><a href="javascript:void(0)"><span class="iconfont icon-email"></span></a></li>
@@ -73,11 +73,11 @@
     <img class="banner" src="UI/cases/banner.png" >
     <div id="frame" class="clearfix">
         <ul class="content-nav cannot_select">
-            <li id="currentA" data-url='./partpage/part-companyintro.html'>重点客户案例</li>
-            <li data-url='./partpage/part-sunsgroup.html'>顺风合作客户</li>
+            <li id="currentA" data-url='./partpage/part-cases-important.html'>重点客户案例</li>
+            <li data-url='./partpage/part-cases-coprator.html'>顺风合作客户</li>
         </ul>
         <div class="content-detail">
-            <iframe id="content-frame" width="100%" onload="this.style.height='150px';this.style.height = this.contentDocument.body.scrollHeight+10+'px';" src="./partpage/part-companyintro.html" ></iframe>
+            <iframe id="content-frame" width="100%" onload="this.style.height='150px';this.style.height = this.contentDocument.body.scrollHeight+10+'px';" src="./partpage/part-cases-important.html" ></iframe>
         </div>
         <script>
             $('#frame').find('.content-nav')[0].addEventListener('click',function(e){
