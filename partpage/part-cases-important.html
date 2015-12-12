@@ -37,7 +37,7 @@
     <img class="casesimg" src="../img/cases/13.png">
     <img class="casesimg" src="../img/cases/14.png">
     <img class="casesimg" src="../img/cases/15.png">
-    <script>Array.prototype.some.call(document.querySelectorAll('.casesimg'),function(it){it.style.height = it.offsetWidth*.75+'px';})</script>
+    <script>Array.prototype.some.call(document.querySelectorAll('.casesimg'),function(it){it.style.height = Math.floor(it.offsetWidth*.75)+'px';})</script>
 </div>
 </body>
 </html>

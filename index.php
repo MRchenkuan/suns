@@ -31,47 +31,8 @@
     </style>
 </head>
 <body style="min-width: 768px">
-<div id="nav">
-    <img onclick="window.location='./index.html'" id="logo" src="./UI/logo.png"/>
 
-    <ul class="nav-option">
-        <li><a href="javascript:void(0)"><span class="iconfont icon-wechat"></span></a></li>
-        <li><a href="javascript:void(0)"><span class="iconfont icon-weibo"></span></a></li>
-        <li><a href="javascript:void(0)"><span class="iconfont icon-email"></span></a></li>
-        <li onclick="var es = this.parentNode.classList;this.parentNode.className.indexOf('open')>0?es.remove('open'):es.add('open')"><a href="javascript:void(0)"><span class="iconfont icon-menu"></span></a></li>
-
-        <li><a href="javascript:void(0)">加入顺风</a></li>
-        <li><a href="javascript:void(0)">盛美顺风</a></li>
-        <li><a href="javascript:void(0)">顺风新闻</a></li>
-        <li><a href="javascript:void(0)">顺风观察</a></li>
-        <li><a href="./cases.html">顺风案例</a></li>
-        <li><a href="./resource.html">顺风资源</a></li>
-        <li><a href="./idea.html">顺风思想</a></li>
-        <li><a href="./introduction.html">关于顺风</a></li>
-
-
-        <li><a href="javascript:void(0)">MENU</a></li>
-    </ul>
-</div>
-
-
-<div id="page-operator">
-    <ul class="page-option">
-        <li onclick="to('news')"><a href="javascript:void(0)">
-            <div class="riTopTag">LATEAT NEWS 新闻</div>
-            <span class="page-option-tag iconfont icon-news"></span></a></li>
-        <li onclick="to('about')"><a href="javascript:void(0)">
-            <div class="riTopTag">ABOUT US 关于</div>
-            <span class="page-option-tag iconfont icon-about"></span></a></li>
-        <li onclick="to('case')"><a href="javascript:void(0)">
-            <div class="riTopTag">CASES 案例</div>
-            <span class="page-option-tag iconfont icon-cases"></span></a></li>
-        <li onclick="to('contact')"><a href="javascript:void(0)">
-            <div class="riTopTag">CONTACT 联系我们</div>
-            <span class="page-option-tag iconfont icon-contact"></span></a></li>
-    </ul>
-</div>
-
+<?php $isOpen=false; include './widget/pageControler.php';?>
 
 <!--  新闻部分  -->
 <div id="news" class="block">
@@ -104,7 +65,7 @@
 <div id="about" class="block">
     <div class="news-content">
         <div class="title">
-            <a href="./introduction.html">
+            <a href="introduction.php">
                 <div class="tag-left">关于顺风 　 ></div>
             </a>
             <span class="tag-right">ABOUT US</span>
@@ -233,78 +194,7 @@
 
 </div>
 
-
-<!--  联系方式部分  -->
-<div id="contact" class="block">
-    <div class="news-content">
-            <div class="title">
-                <a href="#">
-                    <div class="tag-left" >联系我们 　 ></div>
-                </a>
-                <span class="tag-right">CONTACT US</span>
-            </div>
-            <div class="clearfix">
-                <div id="contact-board">
-                    <ul>
-                        <li>
-                            <dl>
-                                <dt>湖南顺风传媒有限公司</dt>
-                                <dd>FAX:0731-85362211</dd>
-                                <dd>TEL:0731-85362211</dd>
-                                <dd>WECHAT:hnsfcm</dd>
-                                <dd>MAIL:sunfunmedia@sina.com</dd>
-                                <dd>WEBSITE:www.0731sf.com</dd>
-                                <dd>ADD:湖南省长沙市天心区刘家冲北路129号喜民大厦4楼</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>广州顺风广告有限公司</dt>
-                                <dd>FAX:020-38621732</dd>
-                                <dd>TEL:020-38621732</dd>
-                                <dd>WECHAT:gzsf_gg</dd>
-                                <dd>MAIL:gzsfcm@sina.com</dd>
-                                <dd>WEBSITE:www.0731sf.com</dd>
-                                <dd>ADD:广州市越秀区环市东路371-375号世界贸易大厦南塔2413</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>北京顺风影视有限公司</dt>
-                                <dd>FAX:010-65000096</dd>
-                                <dd>TEL:010-65000096</dd>
-                                <dd>WECHAT:hnsfcm</dd>
-                                <dd>MAIL:sunfunmedia@sina.com</dd>
-                                <dd>WEBSITE:www.0731sf.com</dd>
-                                <dd>ADD:北京市朝阳区农展馆南路13号瑞辰国际中心715</dd>
-                            </dl>
-                        </li>
-                    </ul>
-
-                    <div id="link">
-                        <a style="background-image: url('./UI/link1.png')" href="http://www.sunsmarketing.com" title="顺势营销"></a>
-                        <a style="background-image: url('./UI/link2.png')" href="#" title="盛美广告"></a>
-                        <a style="background-image: url('./UI/link3.png')" href="#" title="湖南卫视"></a>
-                    </div>
-                </div>
-
-                <div id="qrcode-board">
-                    <div class="qrcode">
-                        <p>微博二维码</p>
-                        <img src="./UI/qr-wb.png">
-                    </div>
-                    <div class="qrcode">
-                        <p>微信二维码</p>
-                        <img src="./UI/qr-wx.png">
-                    </div>
-                </div>
-            </div>
-
-            <div id="footer">
-                Copyright © 2014 www.tangweimm.com Powered By Adol Version 1.0.0
-            </div>
-    </div>
-</div>
+<?php include './widget/linksModel.php';?>
 <!-- 遮罩部分 -->
 <!--<div id="preMask">-->
     <!--<p class="logo"> 顺风传媒 </p>-->
@@ -321,7 +211,4 @@
         <!--</span>-->
     <!--</p>-->
 <!--</div>-->
-</body>
-<script src="./js/common.js"></script>
-<script src="./js/pagecontrol.js"></script>
-</html>
+<?php include './widget/foot.php';?>

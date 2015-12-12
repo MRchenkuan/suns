@@ -56,7 +56,7 @@ function getTvFileMap($provinceName,$remark){
         #chinamap path{fill:#D8D8D8;transition:all .5s ease}
         #chinamap .selected{fill:#E69220;}
         #logo{float: left;width: 10%}
-        #titlelist{float: left;width: 80%;padding: 1% 2%}
+        #titlelist{float: right;width: 85%;padding: 1% 2%}
         #titlelist li{cursor: pointer;;font-weight: bolder;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;float: left;width: 20%;text-align: left;margin: 10px 0;transition:all .5s ease;}
         #titlelist li:hover{color: #E69220;font-weight: bolder;transition:all .5s ease;}
         .imgseleceted{transform:scale(1.2);transition:all .5s ease;}
