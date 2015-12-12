@@ -10,13 +10,11 @@
         <li><a href="javascript:void(0)">加入顺风</a></li>
         <li><a href="javascript:void(0)">盛美顺风</a></li>
         <li><a href="javascript:void(0)">顺风新闻</a></li>
-        <li><a href="javascript:void(0)">顺风观察</a></li>
+        <li><a href="./observation.php">顺风观察</a></li>
         <li><a href="./cases.php">顺风案例</a></li>
         <li><a href="./resource.php">顺风资源</a></li>
         <li><a href="./idea.php">顺风思想</a></li>
         <li><a href="./introduction.php">关于顺风</a></li>
-
-
         <li><a href="javascript:void(0)">MENU</a></li>
     </ul>
 </div>
