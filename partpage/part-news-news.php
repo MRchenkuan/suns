@@ -15,12 +15,13 @@
         .clearfix{overflow:hidden;_zoom:1;}
         .detail div{height: 240px;float: left;line-height: 1.5;}
         .detail div img{width: 100%;height: 100%;border: 0}
-        .datalist{width: 45%;float: left;font-size: 12px;line-height: 1.75}
-        .datalist li{clear: both;width: 100%;cursor: pointer;transition:all .5s ease}
-        .datalist li:hover{transition:none;color:#E69220;}
-        .datalist li span:nth-child(1){overflow:hidden;width: 60%;white-space: nowrap;text-overflow: ellipsis;float: left}
-        .datalist li span:nth-child(2){overflow:hidden;width: 40%;white-space: nowrap;text-overflow: ellipsis;float: right;text-align: right}
-        .impress{width:50%;float: right}
+        .datalist{width: 100%;float: left;font-size: 12px;line-height: 1.75}
+        .datalist li{clear: both;width: 100%;cursor: pointer;transition:all .5s ease;}
+        .datalist li:hover{color:#E69220;transition:none;}
+
+        .datalist li span{overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
+        .datalist li span:nth-child(1){width: 60%;float: left}
+        .datalist li span:nth-child(2){width: 35%;padding-right: 5%;text-align: right;float: right;}
     </style>
 </head>
 <body class="clearfix" style="min-height: 400px;">
@@ -38,7 +39,6 @@
         <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
         <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
     </ul>
-    <img class="impress" src="../UI/observ/image.png">
 </div>
 </body>
 
@@ -55,7 +55,7 @@
         if(!parentWin)throw '找不到父框架';
 
         Array.prototype.some.call(document.querySelectorAll('.dataTitle'),function(it){
-           it.addEventListener('click',showDetail)
+            it.addEventListener('click',showDetail)
         });
 
         /*工具方法 - 展示子频道细节*/
@@ -64,10 +64,6 @@
             var file = this.getAttribute('data-tar');
             var filetype;
             var _iframe, wrap;
-//            var filesInLi = this.files;
-//            var chanelType = this.chanelType;
-//            // var chanelName = this.innerHTML; //防止脚本注入
-//            var chanelName = this.chanelName; //脚本注入
 
             /*初始化遮罩*/
             parentWin.scrollToTop();
@@ -77,50 +73,6 @@
                 $(tvDetail).fadeOut();
             });
             /* ---- */
-
-//            /*初始化 侧边栏文件列表ullist 模块 */
-//            var ullist = document.createElement('ul');
-//            ullist.id = 'filelist';
-//            for (var i = 0; i < filesInLi.length; i++) {
-//                var _li = document.createElement('li');
-//                _li.setAttribute('data-tar', filesInLi[i].l);
-//                _li.innerHTML = filesInLi[i].t;
-//                _li.setAttribute('title', _li.innerHTML);
-//                ullist.appendChild(_li);
-//                _li.addEventListener('click', function () {
-//                    var thisli = this;
-//                    $.ajax({
-//                        type: 'GET',
-//                        url: '.././UI/map/files/' + thisli.getAttribute('data-tar'),
-//                        success: function (data, status, xhr) {
-//                            filetype = xhr.getResponseHeader('Content-Type');
-//                            if (filetype == 'application/pdf') {
-//                                _iframe = document.createElement('iframe');
-//                                _iframe.id = 'tvDetail-fileDetail';//给包围框加ID
-//                            } else if (filetype == 'image/jpeg') {
-//                                wrap = document.createElement('div');
-//                                wrap.id = 'tvDetail-fileDetail';//给包围框加id
-//                                wrap.className = 'imgwrap';
-//                                _iframe = document.createElement('img');
-//                            } else {
-//                                throw 'filetype:' + filetype + '，没有加入逻辑，无法识别'
-//                            }
-//                            _iframe.src = './UI/map/files/' + thisli.getAttribute('data-tar');
-//                            // 移除文件展示节点
-//                            var _temp = parentWin.document.getElementById('tvDetail-fileDetail');
-//                            _temp.parentNode.removeChild(_temp);
-//                            tvDetail.style.display = 'block';
-//                            // 然后重设文件展示节点
-//                            tvDetail.appendChild(_iframe);
-//                            if (filetype == 'image/jpeg') {
-//                                tvDetail.appendChild(wrap);
-//                                wrap.appendChild(_iframe);
-//                            }
-//                        }
-//                    });
-//                });
-//            }
-//            /* ---- */
 
             /* 初始化细节内容页 */
             $.ajax({
@@ -154,52 +106,6 @@
             /* 重置细节内容页 */
             tvDetail.innerHTML = '';
             tvDetail.style.display = 'block';
-            /*----*/
-
-//            /* 初始化 侧边栏head 模块*/
-//            var sideBarHead = document.createElement('div');
-//            sideBarHead.id = 'sideBarHead';
-//            /* ---- */
-//
-//            /* 初始化 侧边栏foot 模块*/
-//            var sideBarFoot = document.createElement('div');
-//            sideBarFoot.id = 'sideBarFoot';
-//            /* ---- */
-//
-//            /* 组成侧边栏 */
-//            var sidebar = document.createElement('div');
-//            sidebar.className = 'siderbar';
-//            sideBarHead.className = sideBarFoot.className = 'sideBarHtmlBox';//统一样式
-//            sidebar.appendChild(sideBarHead);//加入文件列表
-//            sidebar.appendChild(ullist);//加入文件列表
-//            sidebar.appendChild(sideBarFoot);//加入文件列表
-//            tvDetail.appendChild(sidebar);
-//            /*----*/
-//
-//            /* 初始化 内容 of head模块*/
-//            (function () {
-//                var title = document.createElement('p');
-//                title.innerHTML = chanelType;
-//                var logo = document.createElement('img');
-//                logo.src = chanelLogoSrc;
-//                var name = document.createElement('span');
-//                name.innerHTML = chanelName;
-//                var wrap = document.createElement('div');
-//                wrap.appendChild(logo);
-//                wrap.appendChild(name);
-//                sideBarHead.appendChild(title);
-//                sideBarHead.appendChild(wrap);
-//            })();
-//            /*----*/
-//
-//            /* 初始化 内容 of foot模块*/
-//            (function () {
-//                var remark = document.createElement('p');
-//                remark.innerHTML = chanelRemark;
-//                sideBarFoot.appendChild(remark);
-//            })();
-//            /*----*/
-
         }
     })(window);
 </script>

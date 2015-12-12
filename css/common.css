@@ -5,9 +5,9 @@ html{Font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft 
 .nav-option li:nth-child(4){z-index: 9999}
 
 /*menu 文字的样式*/
-.nav-option li:nth-child(13){opacity: 1;right: 80px;transition:opacity 3s cubic-bezier(0.58, -0.24, 0.25, 1)}
-.open li a:hover{color:#E06B0C;transition:all .3s ease; }
-.open li a{color:#000;transition:all .3s ease; }
+.nav-option li:nth-child(14){opacity: 1;right: 80px;transition:opacity 3s cubic-bezier(0.58, -0.24, 0.25, 1)}
+.open li a:hover{color:#E06B0C;transition:none; }
+.open li a{color:#000;transition:all .5s ease; }
 
 /*全页遮罩部分*/
 #preProgress{transition:all .5s ease;}
