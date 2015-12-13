@@ -26,17 +26,17 @@
 <body class="clearfix" style="min-height: 400px;">
 <div class="detail" >
     <ul class="datalist">
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/东方卫视2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
     </ul>
     <img class="impress" src="../UI/observ/image.png">
 </div>
