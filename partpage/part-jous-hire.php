@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="../css/partpage.css" type="text/css" rel="stylesheet" >
+    <script src="../js/jquery.js"></script>
     <title>顺风传媒</title>
     <style>
         body,p{padding: 0;margin: 0}
@@ -17,6 +18,6 @@
     </style>
 </head>
 <body>
-<img class="detail" src="../UI/intro/detail-env-1.png">
+<img class="detail" src="../UI/jous/hiring.png">
 </body>
 </html>

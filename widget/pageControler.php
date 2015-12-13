@@ -7,7 +7,7 @@
         <li><a href="javascript:void(0)"><span class="iconfont icon-email"></span></a></li>
         <li onclick="var es = this.parentNode.classList;this.parentNode.className.indexOf('open')>0?es.remove('open'):es.add('open')"><a href="javascript:void(0)"><span class="iconfont icon-menu"></span></a></li>
 
-        <li><a href="javascript:void(0)">加入顺风</a></li>
+        <li><a href="./joinus.php">加入顺风</a></li>
         <li><a href="javascript:void(0)">盛美顺风</a></li>
         <li><a href="./news.php">顺风新闻</a></li>
         <li><a href="./observation.php">顺风观察</a></li>
