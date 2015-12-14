@@ -1,3 +1,22 @@
+<?php
+function getfileList($filsDir){
+    if(!$filsDir)return array();
+    if(is_dir($filsDir)){
+        $files = scandir($filsDir);
+    }else{
+        return array();
+    }
+
+    $fileArr = array();
+    foreach ($files as $key => $file) {
+        if($file!='.'&&$file!='..'&&is_file($filsDir.$file)){
+            $fileArr[$file] = date('Y/m/d',filemtime($filsDir.$file));
+        }
+    }
+    return $fileArr;
+}
+    $obsrvData = getfileList('../data/obsrv/');
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -26,23 +45,13 @@
 <body class="clearfix" style="min-height: 400px;">
 <div class="detail" >
     <ul class="datalist">
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <?php foreach($obsrvData as $fileName=>$data){ ?>
+            <li><span class="dataTitle" data-tar="./data/obsrv/<?php echo $fileName;?>"><?php echo explode('.',$fileName)[0];?></span><span><?php echo $data?></span></li>
+        <?php } ?>
     </ul>
     <img class="impress" src="../UI/observ/image.png">
 </div>
 </body>
-
-
 
 <script>
     (function(w){
