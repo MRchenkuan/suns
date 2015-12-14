@@ -60,7 +60,7 @@
 </div>
 <script>
 
-    var shunfengicon = new BMap.Icon("../UI/logo.png", new BMap.Size(100,30));
+    var shunfengicon = new BMap.Icon("../UI/jous/location.gif", new BMap.Size(33,50));
 
     var map1 = new BMap.Map("map1");          // 创建地图实例
     var map2 = new BMap.Map("map2");          // 创建地图实例
@@ -68,8 +68,8 @@
     var point1=new BMap.Point(112.997383,28.124185);
     var point2=new BMap.Point(116.472963,39.939832);
 
-    var marker1  = new BMap.Marker(new BMap.Point(112.998082,28.124545),{icon:shunfengicon});
-    var marker2  = new BMap.Marker(new BMap.Point(116.472963,39.939832),{icon:shunfengicon});
+    var marker1  = new BMap.Marker(new BMap.Point(112.997383,28.124585),{icon:shunfengicon});
+    var marker2  = new BMap.Marker(new BMap.Point(116.472963,39.939932),{icon:shunfengicon});
 
     marker1.setAnimation(BMAP_ANIMATION_BOUNCE);
     marker2.setAnimation(BMAP_ANIMATION_BOUNCE);
