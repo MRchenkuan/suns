@@ -14,30 +14,52 @@
         .detail div{height: 240px;float: left;line-height: 1.5;}
         .detail div img{width: 100%;height: 100%;border: 0}
         .casesframe{width: 100%;height:100%;position: relative}
-        .casesframe img{width: 20%;height: 33.3%;float: left }
+        .copBox{width: 20%;height: 33.3%;float: left;overflow: hidden}
         .casesimg:hover{transform:scale(1.2);transition:all .5s ease}
-        .casesimg{transition:all .5s ease}
+        .casesimg{width:100%;height:100%;transition:all .5s ease}
+        #content img{width: 100%}
     </style>
 </head>
 <body>
-<div class="casesframe">
+<div class="casesframe clearfix">
     <!--内容部分-->
-    <img class="casesimg" src="../img/cases/1.png">
-    <img class="casesimg" src="../img/cases/2.png">
-    <img class="casesimg" src="../img/cases/4.png">
-    <img class="casesimg" src="../img/cases/6.png">
-    <img class="casesimg" src="../img/cases/5.png">
-    <img class="casesimg" src="../img/cases/3.png">
-    <img class="casesimg" src="../img/cases/7.png">
-    <img class="casesimg" src="../img/cases/8.png">
-    <img class="casesimg" src="../img/cases/9.png">
-    <img class="casesimg" src="../img/cases/10.png">
-    <img class="casesimg" src="../img/cases/11.png">
-    <img class="casesimg" src="../img/cases/12.png">
-    <img class="casesimg" src="../img/cases/13.png">
-    <img class="casesimg" src="../img/cases/14.png">
-    <img class="casesimg" src="../img/cases/15.png">
-    <script>Array.prototype.some.call(document.querySelectorAll('.casesimg'),function(it){it.style.height = Math.floor(it.offsetWidth*.75)+'px';})</script>
+    <div class="copBox"><img onclick="show(['../data/cases/1.png'])" class="casesimg" src="../img/cases/1.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/2-1.png','../data/cases/2-2.png'])" class="casesimg" src="../img/cases/2.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/3.png'])" class="casesimg" src="../img/cases/4.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/4.png'])" class="casesimg" src="../img/cases/6.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/5.png'])" class="casesimg" src="../img/cases/5.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/6.png'])" class="casesimg" src="../img/cases/3.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/7.png'])" class="casesimg" src="../img/cases/7.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/8.png'])" class="casesimg" src="../img/cases/8.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/9.png'])" class="casesimg" src="../img/cases/9.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/10.png'])" class="casesimg" src="../img/cases/10.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/11.png'])" class="casesimg" src="../img/cases/11.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/12.png'])" class="casesimg" src="../img/cases/12.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/13.png'])" class="casesimg" src="../img/cases/13.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/14.png'])" class="casesimg" src="../img/cases/14.png"></div>
+    <div class="copBox"><img onclick="show(['../data/cases/15.png'])" class="casesimg" src="../img/cases/15.png"></div>
+    <script>Array.prototype.some.call(document.querySelectorAll('.copBox'),function(it){it.style.height = Math.floor(it.offsetWidth*.75)+'px';})</script>
 </div>
+<div id="content" class="clearfix">
+
+</div>
+<script>
+    function show(arg){
+        var _ctnt = document.querySelector('#content');
+        _ctnt.innerHTML='';
+        arg.some(function(it){
+            var _img = document.createElement('img');
+            _img.src=it;
+            _img.onload = function(){
+                var thatframe = window.parent.document.querySelector('#content-frame');
+                window.parent.scrollToTopPos(_ctnt.offsetTop+thatframe.offsetTop-20);
+                thatframe.style.height='150px';thatframe.style.height = thatframe.contentDocument.body.scrollHeight+10+'px';
+            };
+            _ctnt.appendChild(_img)
+
+        });
+
+    }
+</script>
 </body>
 </html>
