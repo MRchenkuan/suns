@@ -38,7 +38,11 @@
     <div class="copBox"><img onclick="show(['../data/cases/13.jpg'])" class="casesimg" src="../img/cases/13.png"></div>
     <div class="copBox"><img onclick="show(['../data/cases/14.jpg'])" class="casesimg" src="../img/cases/14.png"></div>
     <div class="copBox"><img onclick="show(['../data/cases/15.jpg'])" class="casesimg" src="../img/cases/15.png"></div>
-    <script>Array.prototype.some.call(document.querySelectorAll('.copBox'),function(it){it.style.height = Math.floor(it.offsetWidth*.75)+'px';})</script>
+    <script>
+        var casesframe = document.querySelector('.casesframe');
+        var copBoxWidth = casesframe.offsetWidth*.2;
+        Array.prototype.some.call(document.querySelectorAll('.copBox'),function(it){it.style.height = Math.floor(copBoxWidth*.75)+'px';})
+    </script>
 </div>
 <div id="content" class="clearfix">
 
