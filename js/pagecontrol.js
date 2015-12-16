@@ -9,3 +9,9 @@ window.scrollToTop = function(){
     if(win.is(':animated'))return;
     win.animate({'scrollTop':0},500);
 };
+
+window.scrollToTopPos = function(pos){
+    var win = $('html,body');
+    if(win.is(':animated'))return;
+    win.animate({'scrollTop':pos},500);
+};

@@ -14,7 +14,7 @@
     .open li:nth-child(11){width:80px;right: 740px}
     .open li:nth-child(12){width:80px;right: 820px}
     .open li:nth-child(13){width:40px;right: 900px}
-    .open li:nth-child(14){width:80px;right: 90px !important;opacity: 0!important;transition:all .5s ease !important;}
+    .open li:nth-child(14){width:80px;right: 90px !important;opacity: 0!important;transition:all .5s ease !important;z-index: -1}
 
     .block{padding: 0 60px;}
     .first-block{margin-top: 60px;}
