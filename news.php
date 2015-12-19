@@ -28,7 +28,7 @@
 
         /* 浮层局部样式 */
         #tvDetail{display: none;position:absolute;top: 80px;left: 15%;width: 70%;z-index: 1000}
-        #tvDetail iframe,#tvDetail .imgwrap{background: #ffffff;float: left;width: 100%;height: 100%;border-radius: 5px;border:1px solid #cccccc;overflow: hidden;}
+        #tvDetail iframe,#tvDetail .imgwrap{background: #ffffff;float: left;width: 100%;height: 100%;border-radius: 5px;border:none;overflow: hidden;}
         #tvDetail iframe{min-height: 750px;}
         #tvDetail .imgwrap{min-height: 550px;}
         #tvDetail .imgwrap img{width: 100%;margin: 0 auto;}

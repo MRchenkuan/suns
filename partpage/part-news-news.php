@@ -1,3 +1,25 @@
+<?php
+/*--连接数据库--*/
+require_once('../backstage/tools/Kodbc.class.php');
+$Kodbc = new Kodbc('../backstage//Database/NEWSDATA.xml');
+$pageNow = $_GET['page'];
+$sliceParam = 'page';
+
+if(!$pageNow){$pageNow=1;}
+$pagesize = 5;
+$adCollection = $Kodbc->getAllItems(-$pagesize*$pageNow,$pagesize);
+$count = $Kodbc->count();//总共条目数
+$pageCount = ceil($count/$pagesize);//总页数
+
+/*排序*/
+usort($adCollection, function($a, $b) {
+    $al = (int)$a['order'];
+    $bl = (int)$b['order'];
+    if ($al == $bl)
+        return 0;
+    return ($al > $bl) ? -1 : 1;
+});
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -27,17 +49,10 @@
 <body class="clearfix" style="min-height: 400px;">
 <div class="detail" >
     <ul class="datalist">
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
-        <li><span class="dataTitle" data-tar="./UI/map/files/上海/东方卫视/2016年广告刊例价.pdf">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>
+        <?php foreach($adCollection as $items){?>
+            <li><span class="dataTitle" data-tar="./backstage/newstxt.php?id=<?php echo $items['id']?>"><?php echo $items['title']?></span><span><?php echo substr($items['pubdata'],0,10)?></span></li>
+        <?php } ?>
+<!--        <li><span class="dataTitle" data-tar="./backstage/newstxt.php?id=28">2015年9月台网收视数据月度汇总</span><span>2015／01／31</span></li>-->
     </ul>
 </div>
 </body>
@@ -80,7 +95,7 @@
                 url: '../' + file,
                 success: function (data, status, xhr) {
                     filetype = xhr.getResponseHeader('Content-Type');
-                    if (filetype == 'application/pdf') {
+                    if (filetype == 'application/pdf'||filetype == 'text/html') {
                         _iframe = document.createElement('iframe');
                         _iframe.id = 'tvDetail-fileDetail';//给包围框加ID
                     } else if (filetype == 'image/jpeg') {
