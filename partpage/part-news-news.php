@@ -15,7 +15,7 @@
         .clearfix{overflow:hidden;_zoom:1;}
         .detail div{height: 240px;float: left;line-height: 1.5;}
         .detail div img{width: 100%;height: 100%;border: 0}
-        .datalist{width: 100%;float: left;font-size: 12px;line-height: 1.75}
+        .datalist{width: 100%;float: left;font-size: 14px;line-height: 1.75}
         .datalist li{clear: both;width: 100%;cursor: pointer;transition:all .5s ease;}
         .datalist li:hover{color:#E69220;transition:none;}
 
