@@ -13,8 +13,8 @@ $pageCount = ceil($count/$pagesize);//总页数
 
 /*排序*/
 usort($adCollection, function($a, $b) {
-    $al = (int)$a['order'];
-    $bl = (int)$b['order'];
+    $al = (int)$a['pubdata'];
+    $bl = (int)$b['pubdata'];
     if ($al == $bl)
         return 0;
     return ($al > $bl) ? -1 : 1;
