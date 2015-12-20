@@ -15,7 +15,9 @@ function getfileList($filsDir){
     }
     return $fileArr;
 }
-    $obsrvData = getfileList('../data/obsrv/');
+
+$obsrvData = getfileList('../data/obsrv/');
+krsort($obsrvData);
 ?>
 <!DOCTYPE html>
 <html>
@@ -73,10 +75,6 @@ function getfileList($filsDir){
             var file = this.getAttribute('data-tar');
             var filetype;
             var _iframe, wrap;
-//            var filesInLi = this.files;
-//            var chanelType = this.chanelType;
-//            // var chanelName = this.innerHTML; //防止脚本注入
-//            var chanelName = this.chanelName; //脚本注入
 
             /*初始化遮罩*/
             parentWin.scrollToTop();
@@ -87,49 +85,6 @@ function getfileList($filsDir){
             });
             /* ---- */
 
-//            /*初始化 侧边栏文件列表ullist 模块 */
-//            var ullist = document.createElement('ul');
-//            ullist.id = 'filelist';
-//            for (var i = 0; i < filesInLi.length; i++) {
-//                var _li = document.createElement('li');
-//                _li.setAttribute('data-tar', filesInLi[i].l);
-//                _li.innerHTML = filesInLi[i].t;
-//                _li.setAttribute('title', _li.innerHTML);
-//                ullist.appendChild(_li);
-//                _li.addEventListener('click', function () {
-//                    var thisli = this;
-//                    $.ajax({
-//                        type: 'GET',
-//                        url: '.././UI/map/files/' + thisli.getAttribute('data-tar'),
-//                        success: function (data, status, xhr) {
-//                            filetype = xhr.getResponseHeader('Content-Type');
-//                            if (filetype == 'application/pdf') {
-//                                _iframe = document.createElement('iframe');
-//                                _iframe.id = 'tvDetail-fileDetail';//给包围框加ID
-//                            } else if (filetype == 'image/jpeg') {
-//                                wrap = document.createElement('div');
-//                                wrap.id = 'tvDetail-fileDetail';//给包围框加id
-//                                wrap.className = 'imgwrap';
-//                                _iframe = document.createElement('img');
-//                            } else {
-//                                throw 'filetype:' + filetype + '，没有加入逻辑，无法识别'
-//                            }
-//                            _iframe.src = './UI/map/files/' + thisli.getAttribute('data-tar');
-//                            // 移除文件展示节点
-//                            var _temp = parentWin.document.getElementById('tvDetail-fileDetail');
-//                            _temp.parentNode.removeChild(_temp);
-//                            tvDetail.style.display = 'block';
-//                            // 然后重设文件展示节点
-//                            tvDetail.appendChild(_iframe);
-//                            if (filetype == 'image/jpeg') {
-//                                tvDetail.appendChild(wrap);
-//                                wrap.appendChild(_iframe);
-//                            }
-//                        }
-//                    });
-//                });
-//            }
-//            /* ---- */
 
             /* 初始化细节内容页 */
             $.ajax({
@@ -164,50 +119,6 @@ function getfileList($filsDir){
             tvDetail.innerHTML = '';
             tvDetail.style.display = 'block';
             /*----*/
-
-//            /* 初始化 侧边栏head 模块*/
-//            var sideBarHead = document.createElement('div');
-//            sideBarHead.id = 'sideBarHead';
-//            /* ---- */
-//
-//            /* 初始化 侧边栏foot 模块*/
-//            var sideBarFoot = document.createElement('div');
-//            sideBarFoot.id = 'sideBarFoot';
-//            /* ---- */
-//
-//            /* 组成侧边栏 */
-//            var sidebar = document.createElement('div');
-//            sidebar.className = 'siderbar';
-//            sideBarHead.className = sideBarFoot.className = 'sideBarHtmlBox';//统一样式
-//            sidebar.appendChild(sideBarHead);//加入文件列表
-//            sidebar.appendChild(ullist);//加入文件列表
-//            sidebar.appendChild(sideBarFoot);//加入文件列表
-//            tvDetail.appendChild(sidebar);
-//            /*----*/
-//
-//            /* 初始化 内容 of head模块*/
-//            (function () {
-//                var title = document.createElement('p');
-//                title.innerHTML = chanelType;
-//                var logo = document.createElement('img');
-//                logo.src = chanelLogoSrc;
-//                var name = document.createElement('span');
-//                name.innerHTML = chanelName;
-//                var wrap = document.createElement('div');
-//                wrap.appendChild(logo);
-//                wrap.appendChild(name);
-//                sideBarHead.appendChild(title);
-//                sideBarHead.appendChild(wrap);
-//            })();
-//            /*----*/
-//
-//            /* 初始化 内容 of foot模块*/
-//            (function () {
-//                var remark = document.createElement('p');
-//                remark.innerHTML = chanelRemark;
-//                sideBarFoot.appendChild(remark);
-//            })();
-//            /*----*/
 
         }
     })(window);
