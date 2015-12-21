@@ -56,7 +56,7 @@
     <img class="banner" src="UI/news/banner-news.png" >
     <div id="frame" class="clearfix">
         <ul class="content-nav cannot_select">
-            <li id="currentA" data-url='./partpage/part-news-news.php'>顺风观点</li>
+            <li id="currentA" data-url='./partpage/part-news-news.php'>顺风新闻</li>
         </ul>
         <div class="content-detail">
             <iframe id="content-frame" width="100%" onload="this.style.height = this.contentDocument.body.scrollHeight+10+'px';" src="./partpage/part-news-news.php" ></iframe>

@@ -6,7 +6,7 @@ $pageNow = $_GET['page'];
 $sliceParam = 'page';
 
 if(!$pageNow){$pageNow=1;}
-$pagesize = 5;
+$pagesize = 20;
 $adCollection = $Kodbc->getAllItems(-$pagesize*$pageNow,$pagesize);
 $count = $Kodbc->count();//总共条目数
 $pageCount = ceil($count/$pagesize);//总页数
@@ -98,15 +98,22 @@ usort($adCollection, function($a, $b) {
                     if (filetype == 'application/pdf'||filetype == 'text/html') {
                         _iframe = document.createElement('iframe');
                         _iframe.id = 'tvDetail-fileDetail';//给包围框加ID
+                        //重新计算大小
                     } else if (filetype == 'image/jpeg') {
                         wrap = document.createElement('div');
                         wrap.id = 'tvDetail-fileDetail';//给包围框加id
                         wrap.className = 'imgwrap';
                         _iframe = document.createElement('img');
+                        //重新计算大小
                     } else {
                         throw 'filetype:' + filetype + '，没有加入逻辑，无法识别'
                     }
                     _iframe.id = 'tvDetail-fileDetail';
+                    _iframe.addEventListener('load',function(){
+                        console.log(this.style.height);
+                        console.log(this.contentDocument.body.offsetHeight);
+                        this.style.height = this.contentDocument.body.scrollHeight+10+'px';
+                    });
                     _iframe.src = file;
                     tvDetail.appendChild(_iframe);
                     //如果是图片则包装一层容器
