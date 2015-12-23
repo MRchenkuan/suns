@@ -33,11 +33,11 @@ function getPureDirs($path){
     return $_eventFiles;
 }
 
-function getPureFiles($path){
+function getPureFiles($path,$exlude){
     $_eventFiles = array();
     $eventFiles = scandir($path);
     foreach($eventFiles as $k=>$v) {
-        if ($v != '.' && $v != '..' && $v!=".DS_Store") {
+        if ($v != '.' && $v != '..' && $v!=".DS_Store" &$v!=$exlude) {
             array_push($_eventFiles, $v);
         }
     }
@@ -57,7 +57,7 @@ foreach($eventFiles as $k=>$v) {
         <?php
     }
     # 组成json
-    $JPGS = getPureFiles($eventRoot.$v);
+    $JPGS = getPureFiles($eventRoot.$v,"封面.jpg");
     $eventFilesForJson[$v] = $JPGS;
 }
 ?>
