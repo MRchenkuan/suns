@@ -47,7 +47,7 @@
 <div class="detail">
     <?php foreach($adCollection as $items){?>
     <div class="detail-3-col">
-        <img src="../backstage/<?php echo $items['cover']?>">
+        <img class="cover" src="../backstage/<?php echo $items['cover']?>">
         <p class="title"><?php echo $items['title']?></p>
         <p class="foot">
             <span><?php echo substr($items['pubdata'],0,10)?></span>
@@ -55,6 +55,11 @@
         </p>
     </div>
     <?php } ?>
+    <script>
+        var coverFrame = document.querySelector('.detail-3-col');
+        var copBoxWidth = coverFrame.offsetWidth*.75;
+        Array.prototype.some.call(document.querySelectorAll('.cover'),function(it){it.style.height = Math.floor(copBoxWidth*.75)+'px';})
+    </script>
 </div>
 </body>
 </html>
