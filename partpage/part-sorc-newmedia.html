@@ -11,20 +11,37 @@
         li{list-style: none;float: left}
         a{text-decoration: none;color: inherit;display: block}
         .clearfix{overflow:hidden;_zoom:1;}
-        .detail-5-col{margin-top: 1%;transition:all .5s ease}
-        .detail-5-col:hover{transform:scale(1.08);transition:all .5s ease}
+        .detail-6-col{margin-top: 1%;transition:all .5s ease}
+        .detail-6-col:hover{transform:scale(1.08);transition:all .5s ease}
+        .bigbtn{transition:all .5s ease;margin: 0 0 1% 1%;height:80px;line-height: 80px;text-align: center;width: 48.9%;background: green;color:#fff;float: left}
     </style>
 </head>
 <body>
 <p class="detail title" style="width: 98%;margin-left: 1%;margin-bottom: 2%" >五大视频网站优势资源</p>
 <div class="detail clearfix" >
-    <img class="detail-5-col" src="../UI/sorc/nm-youku.png">
-    <img class="detail-5-col" src="../UI/sorc/nm-mangotv.png">
-    <img class="detail-5-col" src="../UI/sorc/nm-tencent.png">
-    <img class="detail-5-col" src="../UI/sorc/nm-tencent.png">
-    <img class="detail-5-col" src="../UI/sorc/nm-tencent.png">
+    <img class="detail-6-col" data-tarcol="blue" src="../UI/sorc/newmedia/1.png">
+    <img class="detail-6-col" data-tarcol="green" src="../UI/sorc/newmedia/2.png">
+    <img class="detail-6-col" data-tarcol="orange" src="../UI/sorc/newmedia/3.png">
+    <img class="detail-6-col" data-tarcol="red" src="../UI/sorc/newmedia/4.png">
+    <img class="detail-6-col" data-tarcol="yellow" src="../UI/sorc/newmedia/5.png">
+    <img class="detail-6-col" data-tarcol="grey" src="../UI/sorc/newmedia/6.png">
 </div>
+<script>
+    var imgs = document.querySelectorAll(".detail-6-col");
+    Array.prototype.some.call(imgs,function(it){
+        it.addEventListener('mouseover',function(){
+            var bigbtn = document.querySelectorAll(".bigbtn");
+            Array.prototype.some.call(bigbtn,function(it2){
+               it2.style.backgroundColor = it.getAttribute("data-tarcol");
+            });
+        })
+    })
+</script>
 <p class="detail title" style="margin-left: 1%;margin-top: 2%;width: 98%" >DSP程序化购买</p>
+<div class="detail">
+    <div class="bigbtn">资源简介</div>
+    <div class="bigbtn">预推资源</div>
+</div>
 <div class="detail clearfix" style="margin-left: 1%;width: 98%;" >
     <div style="width: 35%;float: left;overflow: hidden">
         <img style="width: 98%" src="../UI/sorc/nm-pyhudon.png">
