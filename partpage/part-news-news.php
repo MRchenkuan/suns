@@ -75,6 +75,9 @@ usort($adCollection, function($a, $b) {
 
         /*工具方法 - 展示子频道细节*/
         function showDetail() {
+            /* 重置细节内容页 */
+            tvDetail.innerHTML = '';
+            tvDetail.style.display = 'block';
             console.log(1);
             var file = this.getAttribute('data-tar');
             var filetype;
@@ -124,10 +127,6 @@ usort($adCollection, function($a, $b) {
                 }
             });
             /*----*/
-
-            /* 重置细节内容页 */
-            tvDetail.innerHTML = '';
-            tvDetail.style.display = 'block';
         }
     })(window);
 </script>

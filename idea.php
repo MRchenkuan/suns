@@ -23,6 +23,24 @@
             -khtml-user-select:none;/*早期浏览器*/
             user-select:none;
         }
+        /* 电视局部样式 */
+        #tvDetail{display: none;position:absolute;top: 80px;left: 15%;width: 70%;z-index: 1000}
+        #tvDetail iframe,#tvDetail .imgwrap{background: #ffffff;float: left;width: 100%;height: 100%;border-radius: 5px;border:1px solid #cccccc;overflow: hidden;}
+        #tvDetail iframe{min-height: 750px;}
+        #tvDetail .imgwrap{min-height: 550px;}
+        #tvDetail .imgwrap img{width: 100%;margin: 0 auto;}
+        #closeShell{display: none;background: #15192F;opacity:.8;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 999;}
+        #tvDetail .siderbar{width: 28%;float: right;min-height: 200px;background: white;border-radius: 5px;border:1px solid #cccccc;overflow: hidden;}
+        #filelist {overflow: hidden;_zoom:1;margin: 20px;padding-bottom: 20px;border-bottom: 1px solid #cccccc;}
+        #filelist li{cursor: pointer;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;;background: #F7F3EF;margin-bottom: 5px;display: block;border-radius: 5px;padding: 5px 5%;width: 90%;}
+        #filelist li:hover{color:#fff;background: #E69220;transition:all .5s ease}
+        .sideBarHtmlBox{margin: 20px;overflow: hidden;_zoom:1;}
+        #sideBarHead {border-bottom: 1px #cccccc solid}
+        #sideBarHead p,#sideBarFoot p{color: grey;font-size: 12px;margin-bottom: 10px;}
+        #sideBarHead div{width: 100%;}
+        #sideBarHead img{height: 50px;float: left}
+        #sideBarHead span{max-width: 69%;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;margin-left: 10px;float: left;font-size: 18px;line-height: 50px;}
+        /* -- */
     </style>
 </head>
 <body style="min-width: 768px">
