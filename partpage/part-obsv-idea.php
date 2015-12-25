@@ -50,7 +50,7 @@
     <?php foreach($adCollection as $items){?>
     <div class="detail-3-col">
         <img class="cover" src="../backstage/<?php echo $items['cover']?>">
-        <p class="title" data-tar="./backstage/newstxt.php?id=<?php echo $items['id']?>"><?php echo $items['title']?></p>
+        <p class="title" data-tar="./backstage/newstxt-idea.php?id=<?php echo $items['id']?>"><?php echo $items['title']?></p>
         <p class="foot">
             <span><?php echo substr($items['pubdata'],0,10)?></span>
             <span>by: <?php echo $items['auth']?></span>

@@ -57,7 +57,7 @@
     <div id="frame" class="clearfix">
         <ul class="content-nav cannot_select">
             <li id="currentA" data-url='./partpage/part-sorc-tv.php'>电视</li>
-            <li data-url='./partpage/part-sorc-newmedia.html'>新媒体</li>
+            <li data-url='./partpage/part-sorc-newmedia.php'>新媒体</li>
             <li data-url='./partpage/part-sorc-radio.html'>电台</li>
             <li data-url='./partpage/part-sorc-subway.html'>地铁</li>
             <li data-url='./partpage/part-sorc-outdoor.html'>户外</li>
