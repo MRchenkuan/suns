@@ -50,18 +50,20 @@ function getTvFileMap($tvName,$remark){
         .clearfix{overflow:hidden;_zoom:1;}
         .detail-6-col{margin-top: 1%;transition:all .5s ease}
         .detail-6-col:hover{transform:scale(1.08);transition:all .5s ease}
-        .bigbtn{transition:all .5s ease;margin: 1% 3% 3% 2%;height:80px;line-height: 80px;text-align: center;width: 44.9%;background: green;color:#fff;float: left}
+        .bigbtn{margin: 1% auto 3% auto;transition:all .5s ease;width: 45%;height:80px;line-height: 80px;text-align: center;background: #3b76d1;color:#fff;float: left}
+        .bigbtn:hover{font-size: 120%;}
+        .bigbtn:nth-child(1){margin-right:9%;margin-left:1%}
     </style>
 </head>
 <body>
 <p class="detail title" style="width: 98%;margin-left: 1%;margin-bottom: 2%" >五大视频网站优势资源</p>
 <div class="detail clearfix" >
-    <img class="detail-6-col" data-tar="youku" data-tarcol="blue" src="../UI/sorc/newmedia/1.png">
-    <img class="detail-6-col" data-tar="tengxun" data-tarcol="green" src="../UI/sorc/newmedia/2.png">
-    <img class="detail-6-col" data-tar="souhu" data-tarcol="orange" src="../UI/sorc/newmedia/3.png">
-    <img class="detail-6-col" data-tar="aiqiyi" data-tarcol="red" src="../UI/sorc/newmedia/4.png">
-    <img class="detail-6-col" data-tar="mangotv" data-tarcol="yellow" src="../UI/sorc/newmedia/5.png">
-    <img class="detail-6-col" data-tar="leshi" data-tarcol="grey" src="../UI/sorc/newmedia/6.png">
+    <img class="detail-6-col" data-tar="youku" data-tarcol="#3b76d1" src="../UI/sorc/newmedia/1.png">
+    <img class="detail-6-col" data-tar="aiqiyi" data-tarcol="#4ea20a" src="../UI/sorc/newmedia/2.png">
+    <img class="detail-6-col" data-tar="mangotv" data-tarcol="#d04325" src="../UI/sorc/newmedia/3.png">
+    <img class="detail-6-col" data-tar="leshi" data-tarcol="#ad1f1f" src="../UI/sorc/newmedia/4.png">
+    <img class="detail-6-col" data-tar="souhu" data-tarcol="#ebb926" src="../UI/sorc/newmedia/5.png">
+    <img class="detail-6-col" data-tar="tengxun" data-tarcol="#2d2d2d" src="../UI/sorc/newmedia/6.png">
 </div>
 <script>
     var imgs = document.querySelectorAll(".detail-6-col");
