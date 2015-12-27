@@ -1,3 +1,25 @@
+<?php
+/*--连接数据库--*/
+require_once('./backstage/tools/Kodbc.class.php');
+$Kodbc = new Kodbc('./backstage//Database/ADVTSDATA.xml');
+$pageNow = $_GET['page'];
+$sliceParam = 'page';
+
+if(!$pageNow){$pageNow=1;}
+$pagesize = 5;
+$adCollection = $Kodbc->getAllItems(-$pagesize*$pageNow,$pagesize);
+$count = $Kodbc->count();//总共条目数
+$pageCount = ceil($count/$pagesize);//总页数
+
+/*排序*/
+usort($adCollection, function($a, $b) {
+    $al = (int)$a['order'];
+    $bl = (int)$b['order'];
+    if ($al == $bl)
+        return 0;
+    return ($al < $bl) ? -1 : 1;
+});
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -38,17 +60,15 @@
 <div id="news" class="block">
     <div class="news-content">
         <div id="slider-news" class="singleFrame">
-            <div class="pice"><img class="bgp" src='./img/news/new1.png'></div>
-            <div class="pice"><img class="bgp" src='./img/news/new2.png'></div>
-            <div class="pice"><img class="bgp" src='./img/news/new3.png'></div>
-            <div class="pice"><img class="bgp" src='./img/news/new1.png'></div>
+            <?php foreach($adCollection as $items){?>
+                <div class="pice"><img class="bgp" src='./backstage/<?php echo $items["imgsrc"]; ?>'></div>
+            <?php } ?>
         </div>
         <div class="news-option">
             <ul class="frame-options" style="left: 0;">
-               <li data-tar="0"><a data-choose href="javascript:void(0)"><p>问鼎武功  成就价值</p><p>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
-               <li data-tar="1"><a data-choose href="javascript:void(0)"><p>顺风盛美“喜结良缘”合作发布</p><p>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
-               <li data-tar="2"><a data-choose href="javascript:void(0)"><p>湖南卫视《爸爸去哪儿》招标会议</p><p>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
-               <li data-tar="0"><a data-choose href="javascript:void(0)"><p>问鼎武功  成就价值</p><p>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
+            <?php $i=0; foreach($adCollection as $items){?>
+                <li data-tar="<?php echo $i++?>"><a data-choose href="javascript:void(0)"><p><?php echo $items["title"];?></p><p><?php echo $items["remark"];?></p><p><?php echo substr($items['update'],0,10);?></p><p class="plusTag iconfont icon-plus"></p></a></li>
+            <?php } ?>
             </ul>
          </div>
     </div>
@@ -87,11 +107,9 @@
                 <div class="intro">
                     <p>顺风足迹</p>
                     <div>
-                        2006-2008：项目涉及湖南卫视、浙江卫视、安徽卫视、湖南经视、湖南娱乐频道、等媒体，服务娇兰佳人、以纯服饰、美肤宝……
-                        2006-2008
-                        项目涉及湖南卫视、浙江卫视、安徽卫视、湖南经视、湖南娱乐频道、等媒体，服务娇兰佳人、以纯服饰、美肤宝、珀莱雅、加加酱油、亚华乳业、贵人鸟服饰等。
-                        2009-2010
-                        加深与安徽卫视、湖南卫视、江苏卫视、浙江卫视等媒体的合作；出版专业媒介刊物《风讯》，夯实顺风媒介专家的地位。与多个全国知名品牌如酒鬼酒、珀莱雅、美肤宝等深度合作，服务品牌超过30多个。
+                        2006-2008：项目涉及湖南卫视、浙江卫视、安徽卫视、湖南经视、湖南娱乐频道、等媒体，服务娇兰佳人、以纯服饰、美肤宝……<br>
+                        2006-2008: 项目涉及湖南卫视、浙江卫视、安徽卫视、湖南经视、湖南娱乐频道、等媒体，服务娇兰佳人、以纯服饰、美肤宝、珀莱雅、加加酱油、亚华乳业、贵人鸟服饰等。<br>
+                        2009-2010: 加深与安徽卫视、湖南卫视、江苏卫视、浙江卫视等媒体的合作；出版专业媒介刊物《风讯》，夯实顺风媒介专家的地位。与多个全国知名品牌如酒鬼酒、珀莱雅、美肤宝等深度合作，服务品牌超过30多个。<br>
                     </div>
                     <a href="#"> MORE >></a>
                 </div>
@@ -110,18 +128,21 @@
             <div class="pice clearfix" style="background:#151745">
                 <img class="impress" src="./img/about/img1.png">
                 <div class="intro">
-                    <p>传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒</p>
-                    <div>传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒传媒</div>
+                    <p>关于顺风   ABOUT US</p>
+                    <div>
+                        成立于2006年的顺风传媒，是一家专注于媒体投放策略研究的媒介代理公司，生于湖南，布局全国。目前，顺风传媒已实现准集团化经营，下设3个子公司，整合媒介代理、影视制作、营销咨询业务，年营业额突破7个亿。顺风传媒以电视媒体代理为主业，与江苏卫视、湖南卫视、浙江卫视、安徽卫视、北京卫视、天津卫视、东方卫视、辽宁卫视、深圳卫视、云南卫视等省级卫星平台有了非常深入的合作，与央视1套、央视2套、央视3套、央视4套、央视5套、央视10套都有不同程度的合作。除电视媒体外，顺风传媒还集结网络、电台、地铁等媒体，致力于打造广告投放的全媒体平台！
+                    </div>
                     <a href="#"> MORE >></a>
+
                 </div>
             </div>
 
             <div class="news-option">
                 <ul class="frame-options" style="left: 0;">
-                    <li data-tar="0"><a data-choose href="javascript:void(0)"><p>关于顺风   ABOUT US</p><p>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
-                    <li data-tar="1"><a data-choose href="javascript:void(0)"><p>顺风足迹</p><p>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
-                    <li data-tar="2"><a data-choose href="javascript:void(0)"><p>集团化运营</p><p>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
-                    <li data-tar="3"><a data-choose href="javascript:void(0)"><p>标题标题标题啦啦啦啦啦啦</p><p>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
+                    <li data-tar="0"><a data-choose href="javascript:void(0)"><p>关于顺风   ABOUT US</p><p>成立于2006年的顺风传媒，是一家专注于媒体投放策略研究的媒介代理公司，生于湖南，布局全国。目前，顺风传媒已实现准集团化经营，下设3个子公司，整合媒介代理、影视制作、营销咨询业务，年营业额突破7个亿...</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
+                    <li data-tar="1"><a data-choose href="javascript:void(0)"><p>顺风足迹</p><p>2006-2008：项目涉及湖南卫视、浙江卫视、安徽卫视、湖南经视、湖南娱乐频道、等媒体，服务娇兰佳人、以纯服饰、美肤宝……</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
+                    <li data-tar="2"><a data-choose href="javascript:void(0)"><p>集团化运营</p><p>湖南顺风传媒有限公司隶属于湖南顺风集团。目前，公司已实现准集团化运营，下设3个子公司，分别为湖南顺势营销咨询有限公司、北京顺风影视文化传媒有限公司和湖南盛美顺风互动广告有限公司，业务涉及媒介代理、影视制作、营销咨询、广告策划等</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
+                    <li data-tar="0"><a data-choose href="javascript:void(0)"><p>关于顺风   ABOUT US</p><p>成立于2006年的顺风传媒，是一家专注于媒体投放策略研究的媒介代理公司，生于湖南，布局全国。目前，顺风传媒已实现准集团化经营，下设3个子公司，整合媒介代理、影视制作、营销咨询业务，年营业额突破7个亿...</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
                 </ul>
             </div>
         </div>

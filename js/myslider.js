@@ -27,7 +27,6 @@
         method.turnTo = function(i){
             if(i==method.now)return;
             method.now = i;
-            console.log($this.parent('.myslider_framebox'));
             $this.parent('.myslider_framebox').stop().animate({
                 'scrollLeft':childs[i].offsetLeft
             },500);
