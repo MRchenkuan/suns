@@ -67,7 +67,7 @@ usort($adCollection, function($a, $b) {
         <div class="news-option">
             <ul class="frame-options" style="left: 0;">
             <?php $i=0; foreach($adCollection as $items){?>
-                <li data-tar="<?php echo $i++?>"><a data-choose href="javascript:void(0)"><p><?php echo $items["title"];?></p><p><?php echo $items["remark"];?></p><p><?php echo substr($items['update'],0,10);?></p><p class="plusTag iconfont icon-plus"></p></a></li>
+                <li data-tar="<?php echo $i++?>"><a data-choose href="./news.php"><p><?php echo $items["title"];?></p><p><?php echo $items["remark"];?></p><p><?php echo substr($items['update'],0,10);?></p><p class="plusTag iconfont icon-plus"></p></a></li>
             <?php } ?>
             </ul>
          </div>
@@ -98,7 +98,7 @@ usort($adCollection, function($a, $b) {
                     <div>
                         成立于2006年的顺风传媒，是一家专注于媒体投放策略研究的媒介代理公司，生于湖南，布局全国。目前，顺风传媒已实现准集团化经营，下设3个子公司，整合媒介代理、影视制作、营销咨询业务，年营业额突破7个亿。顺风传媒以电视媒体代理为主业，与江苏卫视、湖南卫视、浙江卫视、安徽卫视、北京卫视、天津卫视、东方卫视、辽宁卫视、深圳卫视、云南卫视等省级卫星平台有了非常深入的合作，与央视1套、央视2套、央视3套、央视4套、央视5套、央视10套都有不同程度的合作。除电视媒体外，顺风传媒还集结网络、电台、地铁等媒体，致力于打造广告投放的全媒体平台！
                     </div>
-                    <a href="#"> MORE >></a>
+                    <a href="./introduction.php"> MORE >></a>
 
                 </div>
             </div>
@@ -122,27 +122,28 @@ usort($adCollection, function($a, $b) {
                         湖南顺风传媒
                         湖南顺风传媒有限公司隶属于湖南顺风集团。目前，公司已实现准集团化运营，下设3个子公司，分别为湖南顺势营销咨询有限公司、北京顺风影视文化传媒有限公司和湖南盛美顺风互动广告有限公司，业务涉及媒介代理、影视制作、营销咨询、广告策划等。
                     </div>
-                    <a href="#"> MORE >></a>
+                    <a href="./introduction.php"> MORE >></a>
                 </div>
             </div>
-            <div class="pice clearfix" style="background:#151745">
-                <img class="impress" src="./img/about/img1.png">
+
+            <div class="pice clearfix" style="background:#1a3c39">
+                <img class="impress" src="./img/about/img4.png">
                 <div class="intro">
-                    <p>关于顺风   ABOUT US</p>
+                    <p>顺风活动</p>
                     <div>
-                        成立于2006年的顺风传媒，是一家专注于媒体投放策略研究的媒介代理公司，生于湖南，布局全国。目前，顺风传媒已实现准集团化经营，下设3个子公司，整合媒介代理、影视制作、营销咨询业务，年营业额突破7个亿。顺风传媒以电视媒体代理为主业，与江苏卫视、湖南卫视、浙江卫视、安徽卫视、北京卫视、天津卫视、东方卫视、辽宁卫视、深圳卫视、云南卫视等省级卫星平台有了非常深入的合作，与央视1套、央视2套、央视3套、央视4套、央视5套、央视10套都有不同程度的合作。除电视媒体外，顺风传媒还集结网络、电台、地铁等媒体，致力于打造广告投放的全媒体平台！
+                        我们每年有两次公司团队活动，年中进行员工素质拓展培训，年底外出旅游，让员工之间互相了解，团结合作，我们是一个友好的大家庭。
                     </div>
-                    <a href="#"> MORE >></a>
+                    <a href="./introduction.php"> MORE >></a>
 
                 </div>
             </div>
 
-            <div class="news-option">
+            <div class="news-option" onclick="location = './introduction.php'">
                 <ul class="frame-options" style="left: 0;">
                     <li data-tar="0"><a data-choose href="javascript:void(0)"><p>关于顺风   ABOUT US</p><p>成立于2006年的顺风传媒，是一家专注于媒体投放策略研究的媒介代理公司，生于湖南，布局全国。目前，顺风传媒已实现准集团化经营，下设3个子公司，整合媒介代理、影视制作、营销咨询业务，年营业额突破7个亿...</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
                     <li data-tar="1"><a data-choose href="javascript:void(0)"><p>顺风足迹</p><p>2006-2008：项目涉及湖南卫视、浙江卫视、安徽卫视、湖南经视、湖南娱乐频道、等媒体，服务娇兰佳人、以纯服饰、美肤宝……</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
                     <li data-tar="2"><a data-choose href="javascript:void(0)"><p>集团化运营</p><p>湖南顺风传媒有限公司隶属于湖南顺风集团。目前，公司已实现准集团化运营，下设3个子公司，分别为湖南顺势营销咨询有限公司、北京顺风影视文化传媒有限公司和湖南盛美顺风互动广告有限公司，业务涉及媒介代理、影视制作、营销咨询、广告策划等</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
-                    <li data-tar="0"><a data-choose href="javascript:void(0)"><p>关于顺风   ABOUT US</p><p>成立于2006年的顺风传媒，是一家专注于媒体投放策略研究的媒介代理公司，生于湖南，布局全国。目前，顺风传媒已实现准集团化经营，下设3个子公司，整合媒介代理、影视制作、营销咨询业务，年营业额突破7个亿...</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
+                    <li data-tar="3"><a data-choose href="javascript:void(0)"><p>顺风活动</p><p>我们每年有两次公司团队活动，年中进行员工素质拓展培训，年底外出旅游，让员工之间互相了解，团结合作，我们是一个友好的大家庭。</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
                 </ul>
             </div>
         </div>
@@ -167,7 +168,7 @@ usort($adCollection, function($a, $b) {
         </div>
         <div id="slider-case" class="case-content singleFrame clearfix">
             <div class="pice clearfix" style="background:#151745">
-                <div style="width: 100%;height:100%;position: relative">
+                <div style="width: 100%;height:100%;position: relative" onclick="location = './cases.php'">
                     <!--内容部分-->
                     <div class="cases" > <img src="./img/cases/1.png">   </div>
                     <div class="cases" > <img src="./img/cases/2.png">   </div>
@@ -188,19 +189,25 @@ usort($adCollection, function($a, $b) {
             </div>
             <div class="pice clearfix"><img class="bgp" src="./img/cases/slider2.png"></div>
             <div class="pice clearfix"><img class="bgp" src="./img/cases/slider3.png"></div>
-            <div class="pice clearfix"><img class="bgp" src="./img/cases/slider2.png"></div>
+            <div class="pice clearfix"><img class="bgp" src="./img/cases/slider4.png"></div>
 
-            <div class="news-option">
+            <div class="news-option" onclick="location = './cases.php'">
                 <ul class="frame-options" style="left: 0;">
                     <li data-tar="0"><a data-choose href="javascript:void(0)"><p>重点客户案例</p><p>珀莱雅／美肤宝／滋源／韩后／欧派／南诺信／
                         容园美／伊贝诗／倍康／林之神／腾讯游戏／
                         京润珍珠／口口香／云猴／酒鬼酒……</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
+
                     <li data-tar="1"><a data-choose href="javascript:void(0)"><p>滋源</p><p>滋源全方位跨媒介打通传播渠道
                         从新生代到实力派
                     </p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
-                    <li data-tar="2"><a data-choose href="javascript:void(0)"><p>美肤宝</p><p>容园美《青春进行时》，
-                        大手笔打造全城联动</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
-                    <li data-tar="0"><a data-choose href="javascript:void(0)"><p>问鼎武功  成就价值</p><p>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
+
+                    <li data-tar="2"><a data-choose href="javascript:void(0)"><p>美肤宝</p><p>携手湖南卫视为美肤宝执行《变形计》冠名，
+                      赋予美肤宝公益传播的独特识别形象，线下开展美肤宝阳光计划，形成了电视传播、线下活动、网络二轮传播的大型社会性公益传播事件。
+                            </p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
+
+                    <li data-tar="3"><a data-choose href="javascript:void(0)"><p>容园美</p><p>冠名湖南卫视周播剧场《青春进行时》，
+                                开创以“剧场+剧本”相结合的方式，将品牌和产品形象植入到湖南卫视周播剧场——青春进行时《爱你万缕千丝》剧情中，实现理念植入。
+                            </p><p>2015.10.29</p><p class="plusTag iconfont icon-plus"></p></a></li>
                 </ul>
             </div>
         </div>

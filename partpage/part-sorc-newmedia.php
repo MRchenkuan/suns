@@ -88,7 +88,7 @@ function getTvFileMap($tvName,$remark){
         <p class="title" style="padding: 1%;margin: 3% 0;color: #000">中国最大的程序化购买DSP平台</p>
         <p style="padding: 1%;line-height: 1.5;text-align: justify;">自搜索引擎的创新之后，程序化购买是最重要的数字营销技术，成为最受企业青睐的广告投放方式。快消，汽车，IT，金融，电商，游戏等行业里几乎所有领导品牌都已使用品友互动的程序化购买平台，来提升自身的品牌及运营效率。权威数据显示，品友互动已经占据中国品牌程序化购买市场59.8%的份额。</p>
     </div>
-    <img style="width: 62%;float: right" src="../UI/sorc/nm-mix.png">
+    <img style="width: 48%;float: right" src="../UI/sorc/nm-mix.png">
 </div>
 <script>
     (function(w){
