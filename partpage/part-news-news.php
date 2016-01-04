@@ -113,8 +113,6 @@ usort($adCollection, function($a, $b) {
                     }
                     _iframe.id = 'tvDetail-fileDetail';
                     _iframe.addEventListener('load',function(){
-                        console.log(this.style.height);
-                        console.log(this.contentDocument.body.offsetHeight);
                         this.style.height = this.contentDocument.body.scrollHeight+10+'px';
                     });
                     _iframe.src = file;

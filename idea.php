@@ -29,7 +29,7 @@
         #tvDetail iframe{min-height: 750px;}
         #tvDetail .imgwrap{min-height: 550px;}
         #tvDetail .imgwrap img{width: 100%;margin: 0 auto;}
-        #closeShell{display: none;background: #15192F;opacity:.8;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 999;}
+        #closeShell{display: none;background: url('./UI/loading.gif') #15192F no-repeat center center;opacity:.8;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 999;}
         #tvDetail .siderbar{width: 28%;float: right;min-height: 200px;background: white;border-radius: 5px;border:1px solid #cccccc;overflow: hidden;}
         #filelist {overflow: hidden;_zoom:1;margin: 20px;padding-bottom: 20px;border-bottom: 1px solid #cccccc;}
         #filelist li{cursor: pointer;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;;background: #F7F3EF;margin-bottom: 5px;display: block;border-radius: 5px;padding: 5px 5%;width: 90%;}
