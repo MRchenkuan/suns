@@ -11,7 +11,7 @@
     <script src="./js/jquery.js"></script>
     <script src="./js/myslider.js"></script>
     <!--<script src="./js/preload.js"></script>-->
-    <title>顺风传媒 - 首页</title>
+    <title>顺风传媒 - 顺风观察</title>
     <style>
         body,p{padding: 0;margin: 0}
         /*div,img,ul,li{border: 1px dashed grey}*/
