@@ -1,4 +1,12 @@
 <?php
+// 页面静态化
+$staticPath = "./staticPages/part-news-news.html";
+if(file_exists($staticPath) &&  (filemtime($staticPath)+84000) > time()){
+    echo file_get_contents($staticPath);
+    exit;
+}
+ob_start();
+
 /*--连接数据库--*/
 require_once('../backstage/tools/Kodbc.class.php');
 $Kodbc = new Kodbc('../backstage//Database/NEWSDATA.xml');
@@ -130,3 +138,9 @@ usort($adCollection, function($a, $b) {
 </script>
 
 </html>
+<?php
+// 页面静态化
+$pageContent = ob_get_contents();
+file_put_contents($staticPath,ob_get_contents());
+ob_end_flush();
+?>
