@@ -1,6 +1,6 @@
 <?php
 // 页面静态化
-$staticPath = "./staticPages/part-evt.html";
+$staticPath = "./cache/part-evt.html";
 if(file_exists($staticPath) &&  (filemtime($staticPath)+30) > time()){
     echo file_get_contents($staticPath);
     exit;

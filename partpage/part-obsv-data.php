@@ -1,6 +1,6 @@
 <?php
 // 页面静态化
-$staticPath = "./staticPages/part-obsv-data.html";
+$staticPath = "./cache/part-obsv-data.html";
 if(file_exists($staticPath) &&  (filemtime($staticPath)+84000) > time()){
     echo file_get_contents($staticPath);
     exit;
