@@ -62,7 +62,7 @@ usort($adCollection, function($a, $b) {
             -ms-user-select:none;/*IE10*/
             user-select:none;
         }
-        .pice{width: 100%;height: 70.5%;}
+        .pice{width: 100%;height: 70.5%;background: 50% 50% no-repeat; background-size: cover}
         #news .pice{margin-top: 60px;}
         .bgp{width: 100%;height: 100%}
     </style>
@@ -76,7 +76,9 @@ usort($adCollection, function($a, $b) {
     <div class="news-content">
         <div id="slider-news" class="singleFrame">
             <?php foreach($adCollection as $items){?>
-                <div class="pice"><img class="bgp" src='./backstage/<?php echo $items["imgsrc"]; ?>'></div>
+<!--                <div class="pice"><img class="bgp" src='./backstage/--><?php //echo $items["imgsrc"]; ?><!--'></div>-->
+                <div class="pice" style="background-image: url('./backstage/<?php echo $items["imgsrc"]; ?>');"></div>
+
             <?php } ?>
         </div>
         <div class="news-option">
@@ -202,9 +204,11 @@ usort($adCollection, function($a, $b) {
                     <div class="cases" > <img src="./img/cases/15.png">  </div>
                 </div>
             </div>
-            <div class="pice clearfix"><img class="bgp" src="./img/cases/slider2.png"></div>
-            <div class="pice clearfix"><img class="bgp" src="./img/cases/slider3.png"></div>
-            <div class="pice clearfix"><img class="bgp" src="./img/cases/slider4.png"></div>
+            <div class="pice clearfix" style="background-image: url('./img/cases/slider2.png')"></div>
+            <div class="pice clearfix" style="background-image: url('./img/cases/slider3.png')"></div>
+            <div class="pice clearfix" style="background-image: url('./img/cases/slider4.png')"></div>
+<!--            <div class="pice clearfix"><img class="bgp" src="./img/cases/slider3.png"></div>-->
+<!--            <div class="pice clearfix"><img class="bgp" src="./img/cases/slider4.png"></div>-->
 
             <div class="news-option" onclick="location = './cases.php'">
                 <ul class="frame-options" style="left: 0;">
