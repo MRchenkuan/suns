@@ -38,12 +38,13 @@ usort($adCollection, function($a, $b) {
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
     <?php include './widget/keywords.php';?>
     <link href="./css/pclinet.css" type="text/css" rel="stylesheet" >
     <link href="./css/iconfont.css" type="text/css" rel="stylesheet">
     <link href="./css/adapter.css" type="text/css" rel="stylesheet">
     <link href="./css/common.css" type="text/css" rel="stylesheet">
+<!--    <link href="./css/mobile.css" type="text/css" rel="stylesheet">-->
     <script src="./js/jquery.js"></script>
     <script src="./js/myslider.js"></script>
     <!--<script src="./js/preload.js"></script>-->
@@ -67,7 +68,7 @@ usort($adCollection, function($a, $b) {
         .bgp{width: 100%;height: 100%}
     </style>
 </head>
-<body style="min-width: 768px">
+<body style="min-width: 800px">
 
 <?php $isOpen=false; include './widget/pageControler.php';?>
 

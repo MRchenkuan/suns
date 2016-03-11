@@ -1,0 +1,19 @@
+@media screen and (min-width: 1400px) {
+    .cases{width: 20%;}
+    #news,#about, #case{height: 950px;}
+}
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .cases{width: 25%;}
+    #news,#about, #case{height: 750px;}
+
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .cases{width: 33.3%;}
+    #news,#about, #case{height: 650px;}
+
+}
+@media screen and (max-width: 767px) {
+    .cases{width: 50%;}
+    #news,#about, #case{height: 550px;}
+
+}

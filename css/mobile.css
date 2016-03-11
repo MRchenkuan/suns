@@ -1,0 +1,26 @@
+/* 手机浏览器适配样式 */
+@media screen and (max-width: 768px) {
+    body{width: 100%}
+    .nav-option{display: none}
+    #nav{box-shadow: grey 0 1px 10px;}
+    #nav img{margin: auto;display: block;height: 65px;}
+    #news{height: 600px;}
+    #news .pice{background-position: center;margin-top: 0!important;}
+
+
+
+    #page-operator{display: none}
+    #news{padding: 0}
+
+
+    .block{padding: 0}
+    #about{height: 700px;}
+    #case{height: 700px;}
+    #contact{height: 700px;}
+    /*不显示左右箭头*/
+    .btn-option{display: none}
+    .news-option{overflow-x: scroll;}
+
+    .singleFrame{background:#202020;height:100%;width: 100%;}
+    .cases{background-position: center}
+}

@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
     <?php include './widget/keywords.php';?>
     <link href="./css/pclinet.css" type="text/css" rel="stylesheet" >
     <link href="./css/iconfont.css" type="text/css" rel="stylesheet">
@@ -44,7 +44,7 @@
         /* -- */
     </style>
 </head>
-<body style="min-width: 768px">
+<body>
 
 <?php $isOpen=true; include './widget/pageControler.php';?>
 
