@@ -1,5 +1,4 @@
 /* PC浏览器适配样式 */
-@media screen and (min-width: 768px) {
     .open li:nth-child(1){right: 180px;}
     .open li:nth-child(2){right: 120px}
     .open li:nth-child(3){right: 60px}
@@ -45,4 +44,3 @@
     .about-content .intro a{padding: 40px 20px;color: #DE6A0C;font-weight: bolder;font-size: 12px;text-align: right}
     .about-content .intro div{padding: 0 20px;color: #ffffff;font-size: 12px;}
 
-}

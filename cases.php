@@ -26,7 +26,7 @@
         }
     </style>
 </head>
-<body>
+<body style="min-width: 800px">
 
 <?php $isOpen=true; include './widget/pageControler.php';?>
 
